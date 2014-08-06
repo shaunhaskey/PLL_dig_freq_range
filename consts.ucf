@@ -1,0 +1,50 @@
+#50MHz clock
+NET "clk" LOC = "C9" | IOSTANDARD = LVCMOS33 ;
+NET "clk" PERIOD = 20.0ns HIGH 40%;
+
+#RS232 receive and transmit
+NET "RxD" LOC = "R7" | IOSTANDARD = LVTTL ;
+NET "TxD" LOC = "M14" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = SLOW ;
+
+#Status lights
+NET "LEDS<7>" LOC = "F9" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "LEDS<6>" LOC = "E9" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "LEDS<5>" LOC = "D11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "LEDS<4>" LOC = "C11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "LEDS<3>" LOC = "F11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "LEDS<2>" LOC = "E11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "LEDS<1>" LOC = "E12" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "LEDS<0>" LOC = "F12" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+
+#VCO clock
+NET "VCO_clock" LOC = "B4" | IOSTANDARD = LVCMOS33;
+NET "VCO_clock" PERIOD = 100.0ns HIGH 50%;
+#NET "VCO_clock" CLOCK_DEDICATED_ROUTE = FALSE;
+
+#VCO clock divided by 32
+NET "clock_out" LOC="A4" | IOSTANDARD=LVTTL |SLEW = SLOW | DRIVE=8;
+
+#PLL gate
+NET "PLL_out" LOC = "F8" | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+NET "PLL_out2" LOC = "G9" | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+
+#Buttons to reset, change the phasing and trigger the PLL gating
+NET "rst_button" LOC = "K17" | IOSTANDARD=LVTTL | PULLDOWN;
+NET "trigger_button" LOC = "D18" | IOSTANDARD=LVTTL | PULLDOWN;
+NET "change_phase_button" LOC = "H13" | IOSTANDARD=LVTTL | PULLDOWN;
+
+#Pins for triggering and changing the phasing
+NET "change_phase_pin" LOC = "C7" | IOSTANDARD = LVCMOS33;
+NET "trigger_pin" LOC = "E8" | IOSTANDARD = LVCMOS33;
+NET "change_phase_out" LOC = "A8" | IOSTANDARD = LVCMOS33;
+
+NET "camera_monitor_in" LOC = "B11" | IOSTANDARD = LVCMOS33;
+NET "camera_monitor_out" LOC = "A11" | IOSTANDARD = LVCMOS33;
+
+#Pins for the phase selector
+NET "PLL_cap<3>" LOC = "A6" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8 ;
+NET "PLL_cap<2>" LOC = "B6" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8 ;
+
+#these two are swapped because of a mistake on the PLL board
+NET "PLL_cap<1>" LOC = "F7" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8 ;
+NET "PLL_cap<0>" LOC = "E7" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8 ;

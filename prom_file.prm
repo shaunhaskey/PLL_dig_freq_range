@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator O.61xd
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o /home/srh112/fpga_projects/PLL_V3/prom_file -x xcf04s -u 00000000 top_level.bit 
+
+PROM /home/srh112/fpga_projects/PLL_V3/prom_file.prm map: Fri Sep  6 15:44:33 2013
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          512K
+PROM start    0000:0000
+PROM end      0007:ffff
+PROM checksum 03b1ee84
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    0004:547f     Sep  6 12:46:12 2013 top_level.bit

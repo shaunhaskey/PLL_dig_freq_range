@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/home/srh112/fpga_projects/PLL_V3/impact.xsl
+OUTFILE=/home/srh112/fpga_projects/PLL_V3/impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=/home/srh112/fpga_projects/PLL_V3
+LICENSE=iMPACT
+USER_INFO=iMPACT
